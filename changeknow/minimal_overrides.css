@@ -1,0 +1,183 @@
+/* ===========================================================
+   VIDI EMBED TEMPLATE - MINIMAL CSS OVERRIDES
+   
+   Denne CSS-fil kan hostes på GitHub og loades via cssFiles
+   i GC2 kørselskonfiguration for at skjule UI-elementer i
+   Vidi's standard "embed" template.
+   
+   GitHub Pages sti: /vidi_css/minimal_overrides.css
+   =========================================================== */
+
+/* Skjul home-knap (zoom til start-extent) */
+.leaflet-control-zoom-home,
+#home-btn {
+    display: none !important;
+}
+
+/* Skjul zoom-knapper (+/-) */
+.leaflet-control-zoom {
+    display: none !important;
+}
+
+/* Skjul locate-knap (find min position) */
+.leaflet-control-locate,
+#locate-btn {
+    display: none !important;
+}
+
+/* Skjul measure-knapper (afstandsmåler) */
+.leaflet-control-measure,
+#measure-btn {
+    display: none !important;
+}
+
+/* Skjul draw-knapper (tegneværktøjer) */
+.leaflet-draw-toolbar,
+.leaflet-draw-actions,
+#draw-btn {
+    display: none !important;
+}
+
+/* Skjul print-knap */
+#print-btn,
+.print-btn {
+    display: none !important;
+}
+
+/* Skjul search-knap */
+#search-btn,
+.search-btn {
+    display: none !important;
+}
+
+/* Skjul info/about-knap */
+#info-btn,
+#about-btn {
+    display: none !important;
+}
+
+/* Skjul legend-knap */
+#legend-btn {
+    display: none !important;
+}
+
+/* Skjul fullscreen-knap */
+.leaflet-control-fullscreen,
+#fullscreen-btn {
+    display: none !important;
+}
+
+/* Skjul layer-opacity slider */
+.layer-opacity-slider {
+    display: none !important;
+}
+
+/* Skjul koordinat-visning i bunden */
+.leaflet-control-coordinates {
+    display: none !important;
+}
+
+/* Skjul scale-bar */
+.leaflet-control-scale {
+    display: none !important;
+}
+
+/* Skjul attribution (©OpenStreetMap osv.) - kun hvis lovligt! */
+/* ADVARSEL: Tjek licensbetingelser før du skjuler attribution
+.leaflet-control-attribution {
+    display: none !important;
+}
+*/
+
+/* Reducer attribution til minimal størrelse */
+.leaflet-control-attribution {
+    font-size: 9px !important;
+    opacity: 0.6 !important;
+    background: rgba(255, 255, 255, 0.6) !important;
+    padding: 2px 4px !important;
+}
+
+/* Skjul hamburger/menu-knap hvis den stadig er der */
+#burger-btn,
+.navbar-toggle,
+.offcanvas-toggle {
+    display: none !important;
+}
+
+/* Skjul sidepanel helt (hvis det stadig vises) */
+#side-panel {
+    display: none !important;
+}
+
+/* Juster offcanvas backdrop hvis den vises */
+.offcanvas-backdrop {
+    display: none !important;
+}
+
+/* Kortet fylder hele containeren */
+#map {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Fjern padding/margin på body */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ============================================
+   OPTIONAL: Skjul popups og tooltips
+   Udkommentér hvis du faktisk vil have dem
+   ============================================ */
+
+/* Skjul feature-info popups
+.leaflet-popup {
+    display: none !important;
+}
+*/
+
+/* Skjul tooltips
+.leaflet-tooltip {
+    display: none !important;
+}
+*/
+
+/* ============================================
+   OPTIONAL: Tilpas cursor når hover over kortet
+   ============================================ */
+
+#map {
+    cursor: default !important;
+}
+
+/* Når feature-info er aktivt
+#map.feature-info-active {
+    cursor: crosshair !important;
+}
+*/
+
+/* ============================================
+   RESPONSIVITET
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* På mobil: reducer attribution yderligere */
+    .leaflet-control-attribution {
+        font-size: 7px !important;
+        max-width: 150px !important;
+    }
+}
+
+/* ============================================
+   DEBUGGING
+   Udkommentér for at se hvilke elementer der findes
+   ============================================ */
+
+/*
+[class*="leaflet-control"],
+[id*="btn"],
+[class*="toolbar"] {
+    outline: 2px solid red !important;
+}
+*/
